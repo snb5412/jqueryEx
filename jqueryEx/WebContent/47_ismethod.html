@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script>
+$(function(){
+	$('#male').change(function(){
+		$('#military').prop('disabled', !$(this).prop('checked'));
+		$('p').html(
+			'attr : ' + $(this).attr('checked') + '<br />' +
+			'prop : ' + $(this).prop('checked') + '<br />' +
+			'data- : ' + $(this).data('drop') + '<br />' +
+			'is : ' + $(this).is(':checked'));
+	})
+});
+</script>
+<title>Insert title here</title>
+<style>
+	s { ;}
+</style>
+</head>
+<body>
+	<label for = "male">남자</label>
+	<input type="checkbox" id= "male" data-drop="abc" checked/><br/>
+	
+	<label for = "male">군필여부</label>
+	<input type="checkbox" id= "military" checked/><br/>
+	<hr/>
+	<p></p>
+</body>
+</html>
