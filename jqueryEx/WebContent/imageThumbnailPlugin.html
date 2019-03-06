@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="js/gallery.js"></script>
+<script>
+var images = [
+	'images/Koala.jpg',
+	'images/Desert.jpg',
+	'images/Tulips.jpg',
+	'images/Penguins.jpg',
+	'images/Lighthouse.jpg'
+];
+$(function(){
+	$('#gallery').gallery({
+		title : '이미지 갤러리',
+		arr : images
+	});
+});
+</script>
+<title>Insert title here</title>
+<style>
+	s { ;}
+</style>
+</head>
+<body>
+	<div id="gallery">
+	</div>	
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+var images = [
+	'images/Koala.jpg',
+	'images/Desert.jpg',
+	'images/Tulips.jpg',
+	'images/Penguins.jpg'
+];
+$(function(){
+	images.forEach(function(img){
+		$('<img>').attr('src',img).insertBefore('#more');
+	});
+	
+	$('#more').click(function(){
+		images.shuffle().forEach(function(img){
+				$('<img>').attr('src',img).insertBefore('#more');
+		});
+	});
+	
+	/*
+	$(window).scroll(function(){
+		var scrollHeight = $(window).scrollTop() + $(window).height();
+		var documentHeight = $(document).height();
+		
+		if(scrollHeight > documentHeight - 100){		
+			//콘텐츠 추가
+			images.shuffle().forEach(function(img){
+				$('<img>').attr('src',img).appendTo('body');
+			});
+		}
+	});
+	*/
+	
+});
+</script>
+<title>Insert title here</title>
+<style>
+	s { ;}
+</style>
+</head>
+<body>
+	<button id="more" style="width:100%" class="mt-5 text-center">더 보기</button>
+</body>
+</html>

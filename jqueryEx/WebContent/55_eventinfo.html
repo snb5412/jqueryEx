@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script>
+$(function(){
+	$('div').mousedown(function(e){
+		console.log('위치: (' + e.pageX + ' ,' + e.pageY + ')\n' +
+				'버튼: ' + e.button + '\nCtrl: ' + e.ctrlKey + '\nShift: ' + e.shiftKey);
+	});
+	//page 좌표 : 스크롤된 것 다 포함한 좌표
+	//screen 좌표 : 모니터에 보이는 브라우저 좌측상단을 기준으로한 좌표
+	//client 좌표 : 모니터에 보이는 브라우저의 메뉴, 타이틀 제외하고 좌측상단을 기준으로한 좌표
+});
+</script>
+<title>Insert title here</title>
+<style>
+	s { ;}
+</style>
+</head>
+<body>
+	<div style="width:300px; height:200px;
+				background-color:yellow;"></div>
+</body>
+</html>
